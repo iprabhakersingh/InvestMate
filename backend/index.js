@@ -19,8 +19,8 @@ const OrderRoute = require("./routes/OrdersRoute.js");
 
 app.use(cors({
   origin: [
-    "https://investmate-frontend.onrender.com",
-    "https://investmate-dashboard.onrender.com"
+    "https://investmatefrontend.onrender.com",
+    "https://investmatedashboard.onrender.com",
   ],
   credentials: true
 }));
