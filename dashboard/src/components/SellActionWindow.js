@@ -69,7 +69,7 @@ const SellActionWindow = ({ uid, ltp }) => {
 const handleSellClick = () => {
   axios
     .post(
-      "http://https://investmate-2f43.onrender.com/orders/create",
+      "https://investmate-2f43.onrender.com/orders/create",
       { name: uid, qty: stockQuantity, price: stockPrice, mode: "SELL" },
       { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
     )

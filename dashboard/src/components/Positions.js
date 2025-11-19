@@ -7,7 +7,7 @@ const Positions = () => {
   const [allPositions, setAllPositions] = useState([]);
   
     useEffect(() => {
-      axios.get("http://https://investmate-2f43.onrender.com/positions/index", {
+      axios.get("https://investmate-2f43.onrender.com/positions/index", {
         headers: {
           Authorization:`Bearer ${localStorage.getItem("token")}`,
         },
