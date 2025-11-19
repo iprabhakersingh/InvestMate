@@ -1,0 +1,88 @@
+.funds-page {
+  padding: 10px 20px;
+}
+
+.funds-header {
+  margin-bottom: 15px;
+}
+
+.row {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;                 
+}
+
+.equity-col {
+  flex: 0 0 58% !important;
+}
+
+.commodity-col {
+  flex: 0 0 35% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table {
+  margin-top: 5px;
+}
+
+.table .data {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;           
+  font-size: 14px;
+}
+
+.table hr {
+  margin: 6px 0;
+}
+
+.commodity-box {
+  background: #fff;
+  padding: 18px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+}
+
+.commodity-text {
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.btn {
+  padding: 6px 14px;
+  font-size: 14px;
+}
+
+.table .data {
+  display: flex;
+  justify-content: flex-start; 
+  padding: 6px 0;
+  gap: 250px;  
+}
+
+.data p {
+  margin: 10px;
+  font-size: 15px;
+}
+
+.commodity-col {
+  flex: 0 0 35% !important;
+  display: flex;
+  justify-content: flex-start;    /* center nahi, top-start */
+  align-items: center;
+}
+
+.commodity-box {
+  margin-top: 60px;               /* ⭐ Ye box ko neeche layega */
+  background: #fff;
+  padding: 18px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+}
