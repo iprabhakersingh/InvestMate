@@ -8,7 +8,7 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/holdings/index", {
+    axios.get("https://investmate-2f43.onrender.com/holdings/index", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`
         },

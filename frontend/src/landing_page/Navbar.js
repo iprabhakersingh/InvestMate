@@ -31,7 +31,7 @@ function Navbar() {
                     <form class="d-flex" role="search">
                         <ul class="navbar-nav mb-lg-0">
                             <li class="nav-item">
-                                <a className="nav-link active" aria-current="page" href="http://localhost:3000/register">
+                                <a className="nav-link active" aria-current="page" href="https://investmate-2f43.onrender.com/register">
                                     Signup
                                 </a>
                             </li>

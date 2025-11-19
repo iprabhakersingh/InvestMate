@@ -14,7 +14,7 @@ function Hero() {
           Online platform to invest in stocks, derivatives, mutual funds, and
           more
         </p>
-        <a className="nav-link active" aria-current="page" href="http://localhost:3000/register">
+        <a className="nav-link active" aria-current="page" href="http://https://investmate-2f43.onrender.com/register">
           <button style={{ width: "20%", margin: "0 auto" }} className="p-2 btn btn-primary fs-5">
             Signup Now
           </button>

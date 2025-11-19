@@ -45,7 +45,7 @@ export default function Register() {
     }
 
     axios
-      .post("http://localhost:3002/user/register", data, {
+      .post("https://investmate-2f43.onrender.com/user/register", data, {
         headers: { "Content-Type": "application/json" },
       })
       .then(async (res) => {

@@ -17,7 +17,7 @@ const BuyActionWindow = ({ uid, ltp }) => {
 
   const handleBuyClick = () => {
     axios.post(
-      "http://localhost:3002/orders/create",
+      "https://investmate-2f43.onrender.com/orders/create",
       {
         name: uid,
         qty: stockQuantity,

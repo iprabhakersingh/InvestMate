@@ -7,7 +7,7 @@ function OpenAccount() {
             <div className="row text-center">
                 <h1 className="mt-5 mb-4">Open a Zerodha account</h1>
                 <p className="mb-4">Modern platforms and apps, ₹0 investments, and flat ₹20 intraday and F&O trades.</p>
-                <a className="nav-link active" aria-current="page" href="http://localhost:3000/register">
+                <a className="nav-link active" aria-current="page" href="https://investmate-2f43.onrender.com/register">
                     <button style={{ width: "20%", margin: "0 auto" }} className="p-2 btn btn-primary fs-5">
                         Signup Now
                     </button>

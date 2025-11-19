@@ -7,7 +7,7 @@ const Orders = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3002/orders/index", {
+      .get("https://investmate-2f43.onrender.com/orders/index", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

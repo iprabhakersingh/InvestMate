@@ -38,7 +38,7 @@ export default function Login() {
     };
 
     axios
-      .post("http://localhost:3002/user/login", data, {
+      .post("https://investmate-2f43.onrender.com/user/login", data, {
         headers: { "Content-Type": "application/json" },
       })
       .then(async (res) => {

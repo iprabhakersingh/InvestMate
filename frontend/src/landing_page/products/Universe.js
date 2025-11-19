@@ -34,7 +34,7 @@ function Universe() {
           <img className="mb-3" style={{ height: "55px" }} src="media/images/ditto.png" alt="Ditto" />
           <p className="text-small text-muted">Personalized advice on life<br></br> and health insurance. No spam<br></br> and no mis-selling.</p>
         </div>
-        <a className="nav-link active" aria-current="page" href="http://localhost:3000/register">
+        <a className="nav-link active" aria-current="page" href="https://investmate-2f43.onrender.com/register">
           <button
             className="p-2 btn btn-primary fs-5 mt-5 mb-5"
             style={{ width: "20%", margin: "0 auto" }}
