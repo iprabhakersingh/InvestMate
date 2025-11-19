@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import GeneralContext from "./GeneralContext";
 import "./BuyActionWindow.css";
+import ErrorToast from "./ErrorToast";
+
 
 const SellActionWindow = ({ uid, ltp }) => {
     const [stockQuantity, setStockQuantity] = useState(1);
@@ -91,7 +93,7 @@ const handleSellClick = () => {
 
     return (
         <div className="container" id="sell-window" draggable="true">
-            {errorMsg && <div className="error-toast">{errorMsg}</div>}
+            <ErrorToast message={errorMsg} />
             <div className="regular-order">
                 <div className="inputs">
                     <fieldset>
