@@ -17,9 +17,15 @@ const PositionsRoute = require("./routes/PositionsRoute.js");
 const UserRoute = require("./routes/UserRoute.js");
 const OrderRoute = require("./routes/OrdersRoute.js");
 
-app.use(cors());
-app.use(bodyParser.json());
+app.use(cors({
+  origin: [
+    "https://investmate-frontend.onrender.com",
+    "https://investmate-dashboard.onrender.com"
+  ],
+  credentials: true
+}));
 
+app.use(bodyParser.json());
 app.use("/holdings", HoldingsRoute);
 app.use("/positions", PositionsRoute);
 app.use("/user", UserRoute);
