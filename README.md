@@ -1,80 +1,66 @@
-🚀 InvestMate — Full Stack Stock Trading Platform
+# 🚀 **InvestMate — Full Stack Stock Trading Platform**
 
-A complete end-to-end stock trading & portfolio management system built as a semester project. Includes user dashboard, order execution, holdings tracking, admin APIs, JWT security, and a smooth frontend deployed on Render.
+A complete end‑to‑end stock trading & portfolio management system built as a semester project. Includes secure authentication, dynamic dashboard, order execution, holdings tracking, admin APIs, JWT protection, and clean UI deployed on Render.
 
-🌐 Live Deployments <br>
-Service	URL <br>
-Main Frontend	https://investmatefrontend.onrender.com/<br>
-User Dashboard	https://investmatedashboard.onrender.com/<br>
-Backend API	https://investmate-2f43.onrender.com<br>
-GitHub Repository	https://github.com/iprabhakersingh/InvestMate<br>
+---
 
-<hr>
+## 🌐 **Live Deployments**
 
-📖 Overview
+| Service               | Link                                                                                           |
+| --------------------- | ---------------------------------------------------------------------------------------------- |
+| **Main Frontend**     | [https://investmatefrontend.onrender.com/](https://investmatefrontend.onrender.com/)           |
+| **User Dashboard**    | [https://investmatedashboard.onrender.com/](https://investmatedashboard.onrender.com/)         |
+| **Backend API**       | [https://investmate-2f43.onrender.com](https://investmate-2f43.onrender.com)                   |
+| **GitHub Repository** | [https://github.com/iprabhakersingh/InvestMate](https://github.com/iprabhakersingh/InvestMate) |
 
-InvestMate simulates a real stock trading experience where users can:
+---
 
-Create an account & login securely
+## 📖 **Project Overview**
 
-View portfolio summary instantly
+InvestMate is a simulation of real-world stock trading where users can:
 
-Place Buy/Sell orders
+* Create an account & login securely
+* View portfolio summary instantly
+* Buy & sell stocks
+* Track holdings & completed orders
+* Access charts, analytics & performance insights
 
-Track live holdings and order history
+The architecture separates **Frontend**, **Dashboard**, and **Backend** into isolated deployments for scalability & clarity.
 
-View charts, analytics & stock insights
+---
 
-The platform is designed with a clean architecture — separating frontend, dashboard, and backend into different deployments.
+## ✨ **Key Features**
 
-<hr>
+### 🔐 **Authentication**
 
-✨ Key Features
-🔐 Authentication
+* JWT-based secure login/signup
+* Token verification middleware
+* Fully protected dashboard routes
 
-Secure JWT-based login/signup
+### 📊 **User Dashboard**
 
-Automatic token verification middleware
+* Real-time holdings & positions display
+* Detailed portfolio performance
+* Interactive charts & analytics
+* Clean UI with responsive layout
 
-Protected routes for dashboard & holdings
+### 💸 **Order Management**
 
-<hr>
+* Buy & Sell operations with validation
+* Balance/quantity checking
+* Server-side error handling
+* Instant UI feedback
 
-📊 User Dashboard
+### ⚙️ **Backend (API Layer)**
 
-Real-time holdings & positions
+* Node.js + Express structured controllers
+* MongoDB + Mongoose ORM
+* Token & role-based access control
+* Organized REST APIs
 
-Portfolio performance overview
+---
 
-Order history tracking
-
-Interactive charts/graphs
-
-<hr>
-
-💸 Order Management
-
-Buy & Sell stock operations
-
-Validation for balance & quantity
-
-Server-side error handling with proper UI alerts
-
-<hr>
-
-⚙️ Backend (Admin + API)
-
-Node + Express structured controllers
-
-MongoDB for scalable storage
-
-Middleware-based access control
-
-Well-defined REST endpoints
-
-<hr>
-
-🏗 Tech Stack
+## 🏗 **Tech Stack**
 
 ### **Frontend**
 
@@ -94,25 +80,28 @@ Well-defined REST endpoints
 * Render (Frontend + Dashboard + Backend)
 * GitHub for Version Control
 
-<hr>
+---
 
-⚙️ Installation Guide (Local Setup)
+## ⚙️ **Installation Guide (Local Setup)**
 
-### **Clone Repo**
+### **1️⃣ Clone Repository**
 
 ```bash
 git clone https://github.com/iprabhakersingh/InvestMate
 cd InvestMate
 ```
 
-### **Backend Setup**
+---
 
+### **2️⃣ Backend Setup**
+
+```bash
 cd backend
 npm install
 npm start
 ```
 
-Make sure to add your `.env` file:
+Create a `.env` file:
 
 ```
 MONGO_URI=your_mongodb_url
@@ -120,58 +109,64 @@ JWT_SECRET=your_secret
 PORT=3001
 ```
 
-### **Frontend Setup**
+---
 
-cd frontend	
+### **3️⃣ Frontend Setup**
+
+```bash
+cd frontend
 npm install
 npm start
-
 ```
 
-**Dashboard Setup**
-```
+---
 
+### **4️⃣ Dashboard Setup**
+
+```bash
 cd dashboard
 npm install
 npm start
+```
 
-<hr>
+---
 
-## 📦 API Overview
+## 📦 **API Overview**
 
-### **Auth Routes**
+### 🔐 **Auth Routes**
 
 * POST `/auth/signup`
 * POST `/auth/login`
 
-### **Order Routes**
+### 💸 **Order Routes**
 
 * POST `/order/buy`
 * POST `/order/sell`
 * GET `/order/all`
 
-### **Holdings Routes**
+### 📊 **Holdings Routes**
 
 * GET `/holdings/index`
 
-<hr>
+---
 
-🤝 Contribution
+## 🤝 **Contribution Guide**
 
 1. Fork the repo
 2. Create a feature branch
-3. Commit changes
-4. Create a pull request
+3. Commit your changes
+4. Open a pull request
 
-<hr>
+---
 
-📝 License
+## 📝 **License**
 
-This project is for educational and personal learning purposes.
+This project is for educational and learning purposes.
 
-<hr>
+---
 
-👤 Author
+## 👤 **Author**
 
 **Prabhaker Singh**
-Project: InvestMate
+
+**Project:** InvestMate
