@@ -2,7 +2,7 @@
 
 A complete end-to-end stock trading & portfolio management system built as a semester project. Includes user dashboard, order execution, holdings tracking, admin APIs, JWT security, and a smooth frontend deployed on Render.
 
-🌐 Live Deployments
+🌐 Live Deployments <br>
 Service	URL
 Main Frontend	https://investmatefrontend.onrender.com/
 User Dashboard	https://investmatedashboard.onrender.com/
