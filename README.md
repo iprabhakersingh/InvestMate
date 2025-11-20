@@ -27,6 +27,8 @@ View charts, analytics & stock insights
 
 The platform is designed with a clean architecture — separating frontend, dashboard, and backend into different deployments.
 
+<hr>
+
 ✨ Key Features
 🔐 Authentication
 
@@ -35,6 +37,8 @@ Secure JWT-based login/signup
 Automatic token verification middleware
 
 Protected routes for dashboard & holdings
+
+<hr>
 
 📊 User Dashboard
 
@@ -46,6 +50,8 @@ Order history tracking
 
 Interactive charts/graphs
 
+<hr>
+
 💸 Order Management
 
 Buy & Sell stock operations
@@ -53,6 +59,8 @@ Buy & Sell stock operations
 Validation for balance & quantity
 
 Server-side error handling with proper UI alerts
+
+<hr>
 
 ⚙️ Backend (Admin + API)
 
@@ -64,7 +72,7 @@ Middleware-based access control
 
 Well-defined REST endpoints
 
----
+<hr>
 
 ## 🏗 Tech Stack
 
@@ -86,7 +94,7 @@ Well-defined REST endpoints
 * Render (Frontend + Dashboard + Backend)
 * GitHub for Version Control
 
----
+<hr>
 
 ## ⚙️ Installation Guide (Local Setup)
 
@@ -127,7 +135,7 @@ cd dashboard
 npm install
 npm start
 
----
+<hr>
 
 ## 📦 API Overview
 
@@ -146,7 +154,7 @@ npm start
 
 * GET `/holdings/index`
 
----
+<hr>
 
 ## 🤝 Contribution
 
@@ -155,18 +163,15 @@ npm start
 3. Commit changes
 4. Create a pull request
 
----
+<hr>
 
 ## 📝 License
 
 This project is for educational and personal learning purposes.
 
----
+<hr>
 
 ## 👤 Author
 
 **Prabhaker Singh**
 Project: InvestMate
-
-* GitHub: [https://github.com/iprabhakersingh](https://github.com/iprabhakersingh)
-* Project: InvestMate
