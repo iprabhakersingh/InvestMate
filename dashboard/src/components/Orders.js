@@ -15,7 +15,7 @@ const Orders = () => {
       .then((res) => {
         setAllOrders(res.data.orders);  
       });
-  }, []); 
+  }, [allOrders]); 
   return (
     <>
       <h3 className="title">Orders ({allOrders.length})</h3>
