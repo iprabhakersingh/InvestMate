@@ -1,7 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
-import axios from "axios";
-
 import { GeneralContextProvider } from "./GeneralContext";
 import WatchList from "./WatchList";
 import Summary from "./Summary";
@@ -11,25 +9,6 @@ import Positions from "./Positions";
 import Funds from "./Funds";
 
 const Dashboard = () => {
-
-  // ⭐ BACKEND WARM-UP → Fixes 2–3 seconds delay
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-
-    axios.get("https://investmate-2f43.onrender.com/holdings/index", {
-      headers: { Authorization: `Bearer ${token}` }
-    });
-
-    axios.get("https://investmate-2f43.onrender.com/positions/index", {
-      headers: { Authorization: `Bearer ${token}` }
-    });
-
-    axios.get("https://investmate-2f43.onrender.com/orders/index", {
-      headers: { Authorization: `Bearer ${token}` }
-    });
-  }, []);
-  // ⭐ BACKEND WARM-UP END
-
   return (
     <GeneralContextProvider>
       <div className="dashboard-container">
