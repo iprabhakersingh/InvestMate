@@ -74,7 +74,7 @@ Well-defined REST endpoints
 
 <hr>
 
-## 🏗 Tech Stack
+🏗 Tech Stack
 
 ### **Frontend**
 
@@ -96,7 +96,7 @@ Well-defined REST endpoints
 
 <hr>
 
-## ⚙️ Installation Guide (Local Setup)
+⚙️ Installation Guide (Local Setup)
 
 ### **Clone Repo**
 
@@ -128,7 +128,7 @@ npm start
 
 ```
 
-### **Dashboard Setup**
+**Dashboard Setup**
 ```
 
 cd dashboard
@@ -156,7 +156,7 @@ npm start
 
 <hr>
 
-## 🤝 Contribution
+🤝 Contribution
 
 1. Fork the repo
 2. Create a feature branch
@@ -165,13 +165,13 @@ npm start
 
 <hr>
 
-## 📝 License
+📝 License
 
 This project is for educational and personal learning purposes.
 
 <hr>
 
-## 👤 Author
+👤 Author
 
 **Prabhaker Singh**
 Project: InvestMate
