@@ -9,6 +9,8 @@ User Dashboard	https://investmatedashboard.onrender.com/<br>
 Backend API	https://investmate-2f43.onrender.com<br>
 GitHub Repository	https://github.com/iprabhakersingh/InvestMate<br>
 
+<hr>
+
 📖 Overview
 
 InvestMate simulates a real stock trading experience where users can:
