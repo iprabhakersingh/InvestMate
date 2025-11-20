@@ -1,64 +1,74 @@
-import React, { useState, useEffect, useMemo, Suspense } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-const VerticalGraph = React.lazy(() => import("./VerticalGraph"));
+import { VerticalGraph } from "./VerticalGraph";
+// import { positions } from "../data/data";
 
 const Positions = () => {
   const [allPositions, setAllPositions] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("https://investmate-2f43.onrender.com/positions/index", {
+  
+    useEffect(() => {
+      axios.get("https://investmate-2f43.onrender.com/positions/index", {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          Authorization:`Bearer ${localStorage.getItem("token")}`,
         },
-      })
-      .then((res) => {
+      }).then((res) => {
+        // console.log(res.data);
         setAllPositions(res.data);
       });
-  }, []);
+    }, []);
+  
+    const labels = allPositions.map((subArray) => subArray["name"]);
 
-  // 🔥 Heavy math optimized
-  const processed = useMemo(() => {
-    return allPositions.map((s) => {
-      const curValue = s.price * s.qty;
-      const pnl = (s.price - s.avg) * s.qty;
-      return { ...s, curValue, pnl };
-    });
-  }, [allPositions]);
+    const data = {
+    labels,
+    datasets: [
+      {
+        label: "Stock Price",
+        data: allPositions.map((stock) => stock.price),
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+      },
+    ],
+  };
 
   return (
     <>
       <h3 className="title">Positions ({allPositions.length})</h3>
 
-      {/* ⚡ Table fast */}
-      <table>
-        <tbody>
+      <div className="order-table">
+        <table>
           <tr>
-            <th>Name</th>
-            <th>Qty</th>
-            <th>Avg</th>
+            <th>Product</th>
+            <th>Instrument</th>
+            <th>Qty.</th>
+            <th>Avg.</th>
             <th>LTP</th>
-            <th>Cur Value</th>
             <th>P&L</th>
+            <th>Chg.</th>
           </tr>
 
-          {processed.map((s, idx) => (
-            <tr key={idx}>
-              <td>{s.name}</td>
-              <td>{s.qty}</td>
-              <td>{s.avg.toFixed(2)}</td>
-              <td>{s.price.toFixed(2)}</td>
-              <td>{s.curValue.toFixed(2)}</td>
-              <td>{s.pnl.toFixed(2)}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+          {allPositions.map((stock, index) => {
+            const curValue = stock.price * stock.qty;
+            const isProfit = curValue - stock.avg * stock.qty >= 0.0;
+            const profClass = isProfit ? "profit" : "loss";
+            const dayClass = stock.isLoss ? "loss" : "profit";
 
-      {/* ⚡ Chart loads in background, no UI freeze */}
-      <Suspense fallback={<></>}>
-        {processed.length > 0 && <VerticalGraph data={processed} />}
-      </Suspense>
+            return (
+              <tr key={index}>
+                <td>{stock.product}</td>
+                <td>{stock.name}</td>
+                <td>{stock.qty}</td>
+                <td>{stock.avg.toFixed(2)}</td>
+                <td>{stock.price.toFixed(2)}</td>
+                <td className={profClass}>
+                  {(curValue - stock.avg * stock.qty).toFixed(2)}
+                </td>
+                <td className={dayClass}>{stock.day}</td>
+              </tr>
+            );
+          })}
+        </table>
+        <VerticalGraph data={data} />
+      </div>
     </>
   );
 };
