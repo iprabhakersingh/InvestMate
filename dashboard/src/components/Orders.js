@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { watchlist } from "../data/data";  
+import { watchlist } from "../data/data";
 
 const Orders = () => {
   const [allOrders, setAllOrders] = useState([]);
@@ -13,38 +13,47 @@ const Orders = () => {
         },
       })
       .then((res) => {
-        setAllOrders(res.data.orders);  
-      });
-  }, [allOrders]); 
+        const newData = res.data.orders;
+
+        // 🔥 SIMPLE FIX: sirf tab update karega jab data actual me change ho
+        if (JSON.stringify(newData) !== JSON.stringify(allOrders)) {
+          setAllOrders(newData);
+        }
+      })
+      .catch(() => {});
+  }, [allOrders]);
+
   return (
     <>
       <h3 className="title">Orders ({allOrders.length})</h3>
 
       <div className="order-table">
         <table>
-          <tr>
-            <th>Name</th>
-            <th>Qty.</th>
-            <th>Avg Buy</th>
-            <th>LTP</th>
-            <th>Cur. val</th>
-          </tr>
+          <tbody>
+            <tr>
+              <th>Name</th>
+              <th>Qty.</th>
+              <th>Avg Buy</th>
+              <th>LTP</th>
+              <th>Cur. val</th>
+            </tr>
 
-          {allOrders.map((stock, index) => {
-            const ltp = watchlist.find((x) => x.name === stock.name)?.price || 0;
+            {allOrders.map((stock, index) => {
+              const ltp =
+                watchlist.find((x) => x.name === stock.name)?.price || 0;
+              const curValue = ltp * stock.qty;
 
-            const curValue = ltp * stock.qty;
-
-            return (
-              <tr key={index}>
-                <td>{stock.name}</td>
-                <td>{stock.qty}</td>
-                <td>{stock.price.toFixed(2)}</td>
-                <td>{ltp.toFixed(2)}</td>
-                <td>{curValue.toFixed(2)}</td>
-              </tr>
-            );
-          })}
+              return (
+                <tr key={index}>
+                  <td>{stock.name}</td>
+                  <td>{stock.qty}</td>
+                  <td>{stock.price.toFixed(2)}</td>
+                  <td>{ltp.toFixed(2)}</td>
+                  <td>{curValue.toFixed(2)}</td>
+                </tr>
+              );
+            })}
+          </tbody>
         </table>
       </div>
     </>
@@ -52,4 +61,3 @@ const Orders = () => {
 };
 
 export default Orders;
-
