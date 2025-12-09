@@ -1,4 +1,4 @@
-# 🚀 **InvestMate — Full Stack Stock Trading Platform**
+# 🚀 **InvestMate — Stock Trading Platform**
 
 A complete end‑to‑end stock trading & portfolio management system built as a semester project. Includes secure authentication, dynamic dashboard, order execution, holdings tracking, admin APIs, JWT protection, and clean UI deployed on Render.
 
