@@ -21,6 +21,7 @@ app.use(cors({
   origin: [
     "https://investmatefrontend.onrender.com",
     "https://investmatedashboard.onrender.com",
+    "https://invest-mate.vercel.app",
   ],
   credentials: true
 }));
