@@ -8,7 +8,7 @@ A complete end‑to‑end stock trading & portfolio management system built as a
 
 | Service               | Link                                                                                           |
 | --------------------- | ---------------------------------------------------------------------------------------------- |
-| **Main Frontend**     | [https://investmatefrontend.onrender.com/](https://invest-mate-z8ay.vercel.app/)           |
+| **Main Frontend**     | [https://invest-mate-z8ay.vercel.app/](https://invest-mate-z8ay.vercel.app/)           |
 | **User Dashboard**    | [https://investmatedashboard.onrender.com/](https://investmatedashboard.onrender.com/)         |
 | **Backend API**       | [https://investmate-2f43.onrender.com](https://investmate-2f43.onrender.com)                   |
 | **GitHub Repository** | [https://github.com/iprabhakersingh/InvestMate](https://github.com/iprabhakersingh/InvestMate) |
